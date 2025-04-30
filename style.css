@@ -1,0 +1,123 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+    text-align: center;
+}
+
+.controls, .output {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+select, textarea, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+textarea {
+    min-height: 150px;
+    font-family: monospace;
+    white-space: pre; /* Respect whitespace in placeholder */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#downloadBtn {
+    background-color: #28a745;
+}
+
+#downloadBtn:hover {
+    background-color: #218838;
+}
+
+#chart-container {
+    min-height: 300px; /* Ensure space even before generation */
+    border: 1px solid #eee;
+    margin-bottom: 15px;
+    background-color: #fff; /* White background for the chart area */
+    overflow: auto; /* Add scrollbars if chart is too big */
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+/* --- Basic SVG Styles (D3 will often override/add styles) --- */
+.chart-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.axis-label {
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #ccc;
+    shape-rendering: crispEdges; /* Makes lines sharp */
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.bar {
+    fill: steelblue;
+    transition: fill 0.2s ease;
+}
+
+.bar:hover {
+    fill: lightblue;
+}
+
+.grid line {
+    stroke: #e0e0e0;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.value-label {
+    font-size: 10px;
+    fill: #333;
+    text-anchor: middle;
+}
