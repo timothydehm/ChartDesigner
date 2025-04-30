@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory SVG Chart Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Inventory SVG Chart Generator</h1>
+
+    <div class="controls">
+        <label for="chartType">Chart Type:</label>
+        <select id="chartType">
+            <option value="barTotal">Bar Chart (Total Items per Room)</option>
+            <option value="barBreakdown">Stacked Bar Chart (Item Breakdown)</option>
+            </select>
+
+        <label for="dataInput">Inventory Data (JSON format):</label>
+        <textarea id="dataInput" rows="10" placeholder='Example:
+{
+  "Living Room": {"Chairs": 4, "Tables": 1, "Lamps": 2},
+  "Kitchen": {"Chairs": 2, "Tables": 1, "Appliances": 5},
+  "Bedroom": {"Beds": 1, "Dressers": 1, "Lamps": 1},
+  "Office": {"Chairs": 1, "Desks": 1, "Computers": 1}
+}
+        '></textarea>
+
+        <button id="generateBtn">Generate Chart</button>
+    </div>
+
+    <div class="output">
+        <h2>Preview</h2>
+        <div id="chart-container">
+            </div>
+        <button id="downloadBtn" style="display: none;">Download SVG</button>
+        <p id="error-message" class="error"></p>
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
